@@ -1,5 +1,3 @@
-
-
 default:
   avatar: https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg
   link: https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg
@@ -42,28 +40,36 @@ cdn:
 navbar:
   visiable: auto # always, auto
   logo: # choose [img] or [icon + title]
-    img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+    img: 
     icon:
-    title:
+    title: PuFanyi's Blog
   menu:
-    - name: 博客
+    - name: 主页
       icon: fas fa-rss
       url: /
     - name: 分类
       icon: fas fa-folder-open
       url: categories/
+      rel: nofollow
     - name: 标签
       icon: fas fa-tags
-      url: tags/
+      url: /tags/
     - name: 归档
       icon: fas fa-archive
       url: archives/
+      rel: nofollow
     - name: 友链
       icon: fas fa-link
       url: friends/
+      rel: nofollow
     - name: 关于
-      icon: fas fa-info-circle
+      icon: fas fa-user
       url: about/
+      rel: nofollow
+    - name: 公告
+      icon: fas fa-bullhorn
+      url: categories/公告/
+      rel: nofollow
   search: Search...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
@@ -76,10 +82,10 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture
+  background: https://cdn.jsdelivr.net/gh/pufanyi/CDN/img/my_blog_back_ground.webp
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
-  title: 'Volantis'
+  title: "PuFanyi's Blog"
   subtitle: ''
   search: A Wonderful Theme for Hexo # search bar placeholder
   features:
@@ -183,8 +189,8 @@ article:
       # 默认文章作者（可在 _data/author.yaml 中增加其他作者，并在 front-matter 中设置）
       # https://volantis.js.org/advanced-settings/#多人协同
       author:
-        avatar:
-        name: 请设置文章作者
+        avatar: https://cdn.jsdelivr.net/gh/pufanyi/CDN/img/avatar_very_small.webp
+        name: pufanyi
         url: /
       # 文章创建日期
       date:
@@ -236,7 +242,7 @@ article:
 comments:
   title: <i class='fas fa-comments'></i> 评论
   subtitle:
-  service: giscus # giscus, beaudar, utterances, valine, twikoo, waline, minivaline, disqus, disqusjs, gitalk, vssue, livere, isso, hashover
+  service: valine # giscus, beaudar, utterances, valine, twikoo, waline, minivaline, disqus, disqusjs, gitalk, vssue, livere, isso, hashover
   # giscus
   # https://giscus.app
   # https://github.com/laymonage/giscus
@@ -279,12 +285,12 @@ comments:
   # Valine
   # https://valine.js.org/
   valine:
-    # js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
+    js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
     path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是valine的问题
     placeholder: 快来评论吧~  # 评论占位提示
     # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder emojiCDN emojiMaps] 选项
-    appId: # your appId
-    appKey: # your appKey
+    appId: 2ee88NybQVlbCRxFuTdCjxpu-gzGzoHsz # your appId
+    appKey: VUsFlqpqPIe23eJxW16iKdfJ # your appKey
     meta: [nick,mail,link] # valine comment header info
     requiredFields: [nick,mail]
     enableQQ: true # Unstable avatar link
@@ -394,7 +400,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+      avatar: https://cdn.jsdelivr.net/gh/pufanyi/CDN/img/avatar.webp
       shape: rectangle # circle, rectangle
       url: /about/
       title:
@@ -404,11 +410,11 @@ sidebar:
         - icon: fas fa-rss
           url: /atom.xml
         - icon: fas fa-envelope
-          url: mailto:me@xxx.com
+          url: mailto:pufanyi@gmail.com
         - icon: fab fa-github
-          url: https://github.com/volantis-x/
-        - icon: fas fa-headphones-alt
-          url: /
+          url: https://github.com/pufanyi/
+        - icon: fas fa-code
+          url: https://codeforces.com/profile/pufanyi
     # ---------------------------------------
     # toc widget (valid only in articles)
     toc:
