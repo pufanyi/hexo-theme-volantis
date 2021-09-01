@@ -30,12 +30,12 @@ const locationHash = () => {
       setTimeout(() => {
         if (window.location.hash.startsWith('#fn')) { // hexo-reference https://github.com/volantis-x/hexo-theme-volantis/issues/647
           window.scrollTo({
-            top: target.offsetTop + volantis.dom.bodyAnchor.offsetTop - volantis.dom.header.offsetHeight,
+            top: target.getBoundingClientRect().top + document.documentElement.scrollTop - volantis.dom.header.offsetHeight - 5,
             // behavior: "smooth" //平滑滚动
           });
         } else {
           window.scrollTo({
-            top: target.offsetTop + volantis.dom.bodyAnchor.offsetTop + 5,
+            top: target.getBoundingClientRect().top + document.documentElement.scrollTop + 5, // 锚点中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight
             // behavior: "smooth" //平滑滚动
           });
         }
@@ -220,7 +220,7 @@ const VolantisApp = (() => {
         fn.scrolltoElement(volantis.dom.commentTarget);
         e.stopImmediatePropagation();
       });
-    } else volantis.dom.comment.remove(); // 关闭了评论，则隐藏评论按钮
+    } else volantis.dom.comment.style.display='none'; // 关闭了评论，则隐藏评论按钮
 
     // 移动端toc目录按钮 【移动端】
     if (volantis.isMobile) {
@@ -239,7 +239,7 @@ const VolantisApp = (() => {
           volantis.dom.tocTarget.removeClass('active');
           volantis.dom.toc.removeClass('active');
         });
-      } else volantis.dom.toc.remove(); // 隐藏toc目录按钮
+      } else volantis.dom.toc.style.display='none'; // 隐藏toc目录按钮
     }
   }
 
@@ -394,7 +394,7 @@ const VolantisApp = (() => {
         let target = document.getElementById(targetID);
         if (target) {
           window.scrollTo({
-            top: target.offsetTop + volantis.dom.bodyAnchor.offsetTop - volantis.dom.header.offsetHeight,
+            top: target.getBoundingClientRect().top + document.documentElement.scrollTop - volantis.dom.header.offsetHeight - 5,
             // behavior: "smooth" //平滑滚动
           });
         }
