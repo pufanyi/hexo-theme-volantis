@@ -545,7 +545,7 @@ site_footer:
   #   <span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
   #   <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   # site copyright
-  copyright: '[Copyright © 2017-2020 pufanyi](/)'
+  copyright: '[Copyright © 2017-2021 pufanyi](/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
 ############################### Site Footer ############################### > end
@@ -1014,11 +1014,11 @@ custom_css:
   navbar:
     height: 64px
     width: auto # auto, max
-    effect: [shadow, blur] # [shadow, floatable, blur]
+    effect: [shadow, floatable, blur]
   sidebar:
-    effect: [shadow] # [shadow, floatable, blur]
+    effect: [shadow, floatable, blur]
   body:
-    effect: [shadow] # [shadow, floatable, blur]
+    effect: [shadow, floatable, blur]
     highlight:
       language: true # show language of codeblock
       grayscale: false # Enable grayscale effect
@@ -1055,19 +1055,19 @@ custom_css:
     logofont:
       fontfamily: '"euler", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'euler'
-      url: https://cdn.jsdelivr.net/gh/pufanyi/CDN/fonts/euler.otf
+      url: https://cdn.jsdelivr.net/gh/pufanyi/CDN/fonts/euler.woff2
       weight: normal
       style: normal
     bodyfont:
       fontfamily: 'UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'UbuntuMono'
-      url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      url: https://cdn.jsdelivr.net/gh/pufanyi/CDN/fonts/UbuntuMono-Regular.woff2
       weight: normal
       style: normal
     codefont:
       fontfamily: 'Menlo, UbuntuMono, Monaco'
       name: 'Monaco'
-      url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
+      url: https://cdn.jsdelivr.net/gh/pufanyi/CDN/fonts/Monaco.woff2
       weight: normal
       style: normal
 ############################### Custom css ############################### > end
